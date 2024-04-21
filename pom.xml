@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>carlosestebangil</groupId>
+  <artifactId>Concurrencia</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- agrego test (junit) y logging (log4j)  conf -->
+  
+   <properties>
+	   <junit.jupiter.version>5.9.1</junit.jupiter.version>
+	   <junit.platform.version>1.9.1</junit.platform.version>
+	   
+    
+       <maven.compiler.source>17</maven.compiler.source>
+       <maven.compiler.target>17</maven.compiler.target>
+    
+  </properties>
+  
+<dependencies>
+	  
+	<dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+	</dependency>
+	
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>${junit.platform.version}</version>
+            <scope>test</scope>
+        </dependency>
+      
+       <!-- 2024 pre job pruebo con otra version a ver si esta anda en docker yo que se --> 
+        <dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.1</version>
+		</dependency>
+		
+  </dependencies>
+  	
+  	<!-- x ahora no le agrego la conf de build xa full jar y conf de compil en pom xa q logj pueda correr en el docker s sin 
+  			q le falten las libs que usa --> 
+  			
+  			
+</project>
